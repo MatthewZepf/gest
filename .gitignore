@@ -1,0 +1,8 @@
+/backend/__pycache__/
+/backend/env/
+
+/electron/node_modules/
+
+/react-app/node_modules/
+/react-app/build/
+

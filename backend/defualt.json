@@ -1,0 +1,44 @@
+{
+    "adv_parameters": {
+      "face_detection_confidence": 0.2,
+      "face_mesh_confidence": 0.5,
+      "face_mesh_tracking": 0.5,
+      "time_window": 0.3,
+      "action_cooldown": 0.5,
+      "magnitude_threshold": 0.01
+    },
+    "action_parameters": {
+      "up_action": {
+        "command": [
+          "ArrowUp"
+        ]
+      },
+      "up_right_action": {
+        "text": []
+      },
+      "right_action": {
+        "command": [
+          "ArrowRight"
+        ]
+      },
+      "down_right_action": {
+        "text": []
+      },
+      "down_action": {
+        "command": [
+          "ArrowDown"
+        ]
+      },
+      "down_left_action": {
+        "text": []
+      },
+      "left_action": {
+        "command": [
+          "ArrowLeft"
+        ]
+      },
+      "up_left_action": {
+        "text": []
+      }
+    }
+  }

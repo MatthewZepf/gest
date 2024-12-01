@@ -1,0 +1,240 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #C0C9C4; /* Light silvery gray background */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.compass-container {
+  position: relative;
+  width: 80vw; /* Increased size using viewport width */
+  height: 80vh; /* Increased size using viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compass-box {
+  position: absolute;
+  width: 15vw; /* Dynamic width using viewport width */
+  height: 5vw; /* Dynamic height using viewport width to keep boxes square */
+  background-color: #ABB1AF;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0; /* Removed rounded edges */
+  font-size: 1.5vw; /* Dynamic font size using viewport width */
+}
+
+.keybind-box {
+  margin: 10px;
+}
+
+.keybind-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.keybind-box select {
+  width: 200px; /* Adjust the width as needed */
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Positioning for each box */
+.up {
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.up-and-right {
+  top: 20%;
+  right: 10%;
+}
+
+.right {
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
+}
+
+.down-and-right {
+  bottom: 20%;
+  right: 10%;
+}
+
+.down {
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.down-and-left {
+  bottom: 20%;
+  left: 10%;
+}
+
+.left {
+  top: 50%;
+  left: 5%;
+  transform: translate(0, -50%);
+}
+
+.up-and-left {
+  top: 20%;
+  left: 10%;
+}
+
+/* Center "Gesture" title */
+.center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vw; /* Dynamic font size using viewport width */
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  z-index: 2;
+  padding: 2vw; /* Dynamic padding using viewport width */
+  width: 18%; /* Adjusted width */
+  height: 30%; /* Adjusted height */
+}
+
+/* Confirm and Start Button */
+.confirm-button {
+  position: absolute;
+  bottom: -10%; /* Adjusted to position below the compass */
+  right: -5%; /* Positioned at the bottom-right */
+  background-color: #64cad7; /* Light blue */
+  color: white;
+  font-size: 2vw; /* Dynamic font size using viewport width */
+  padding: 1vw 2vw; /* Dynamic padding using viewport width */
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.stop-button {
+  position: absolute;
+  bottom: 1.5%; /* Adjust to align visually */
+  right: 10%; /* Adjust to align visually */
+  background-color: #f51111; 
+  color: white;
+  font-size: 2vw; 
+  padding: 1vw 2vw;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.top-bar-button {
+  background-color: #D9D9D9;
+  color: white;
+  padding: 1.5vh 0; /* Adjust padding for vertical spacing */
+  font-size: 2.8vh;
+  border: .2vh solid black;
+  flex: 1; /* Makes each button take up equal space */
+  text-align: center; /* Centers the button text */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.top-bar-button:hover {
+  background-color: #49CFDF;
+}
+
+.top-bar-button.clicked {
+  background-color: #49CFDF; /* Blue color when clicked */
+}
+
+.in-progress-container {
+  background-color: #C0C9C4; 
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Ensure absolute children position themselves relative to this */
+}
+
+.in-progress-title {
+  font-size: 3vw; /* Dynamic font size using viewport width */
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  padding: 2vw; /* Dynamic padding using viewport width */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.top-left-image {
+  position: absolute;
+  top: 5vh;
+  left: 5vh;
+  width: 17vh; /* Adjust the size as needed */
+  height: 17vh; /* Adjust the size as needed */
+  z-index: 1; /* Ensure the image is below the top bar */
+}
+.underneath-image {
+  width: 50%; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 0; /* Remove any top margin */
+  position: relative;
+  top: 20vh; /* Align it directly below the top bar */
+  right: 10vh;
+}
+
+.top-bar {
+  display: flex;
+  /* justify-content: space-between;  */
+  align-items: center;
+  color: white;
+  height: 10vh; /* Adjust the height as needed */
+  width: 50%; /* Adjust the width as needed */
+  position: relative; /* Relative positioning for alignment */
+  z-index: 2; /* Ensure the top bar is above other elements */
+  top: 22.5vh;
+  right: 10vh;
+
+}
+.practice-log {
+  position: absolute;
+  top: 26vh; /* Below the top bar */
+  right: 7%; /* Adjust the spacing from the right edge */
+  width: 20%; /* Adjust as needed */
+  height: 50vh; /* Adjust as needed */
+  background-color: #e0e0e0; /* Light gray background */
+  border: 1px solid #d0d0d0; /* Subtle border */
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.practice-log-title {
+  font-family: Arial, sans-serif; /* Match the button font */
+  font-size: 1.5vw; /* Dynamic font size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+.practice-log-content {
+  font-family: Arial, sans-serif; /* Match the button font */
+  font-size: 1.5vw; /* Adjust font size */
+  line-height: 1.5;
+  color: #555;
+  align-items: center;
+  padding-left: 2vh;
+}

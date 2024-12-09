@@ -3,10 +3,14 @@ import time
 import numpy as np
 import cv2
 import pyautogui
+import os
+
+settings_path = os.path.join(os.path.dirname(__file__), '..', 'electron', 'settings.json')
+
 
 def get_settings():
     # assert(os.path.exists('settings.json'))
-    with open('../electron/settings.json', 'r') as f:
+    with open(settings_path, 'r') as f:
         return json.load(f)
 
 def vector_magnitude(vector):
@@ -27,19 +31,19 @@ def determine_direction(vector):
     if -22.5 < angle <= 22.5:
         return "left"
     elif 22.5 < angle <= 67.5:
-        return "up_right"
+        return "down_left"
     elif 67.5 < angle <= 112.5:
         return "down"
     elif 112.5 < angle <= 157.5:
-        return "up_left"
+        return "down_right"
     elif angle > 157.5 or angle <= -157.5:
         return "right"
     elif -157.5 < angle <= -112.5:
-        return "down_left"
+        return "up_right"
     elif -112.5 < angle <= -67.5:
         return "up"
     elif -67.5 < angle <= -22.5:
-        return "down_right"
+        return "up_left"
     
     return "Center"
 

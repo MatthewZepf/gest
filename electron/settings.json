@@ -4,7 +4,7 @@
     "face_mesh_confidence": 0.5,
     "face_mesh_tracking": 0.5,
     "time_window": 0.3,
-    "action_cooldown": 0.5,
+    "action_cooldown": 0.25,
     "magnitude_threshold": 0.01
   },
   "action_parameters": {
@@ -22,7 +22,9 @@
       ]
     },
     "down_right_action": {
-      "text": []
+      "text": [
+        ""
+      ]
     },
     "down_action": {
       "command": [
@@ -30,7 +32,9 @@
       ]
     },
     "down_left_action": {
-      "text": []
+      "text": [
+        ""
+      ]
     },
     "left_action": {
       "command": [

@@ -49,7 +49,7 @@ const InProgress = () => {
             console.log("Practice Log:", message.data); // Log the practice log
             setPracticeLog((prevLog) => {
               const newLog = [...prevLog, message.data];
-              if (newLog.length > 7) {
+              if (newLog.length > 6) {
                 newLog.shift(); // Remove the oldest entry if more than 10
               }
               return newLog;

@@ -39,7 +39,7 @@ function killPythonProcess() {
 function startPythonProcess() {
   // Run run_python.sh to activate the virtual environment and start the Python script
   // pythonProcess = spawn('sh', [path.join(__dirname, '..', 'backend', 'run_python.sh')]);
-  pythonProcess = spawn('python', [path.join(__dirname, '..', 'backend', 'main.py')]);
+  pythonProcess = spawn('python3', [path.join(__dirname, '..', 'backend', 'main.py')]);
 
   pythonProcess.stdout.on('data', (data) => {
     console.log(`Python stdout: ${data}`);
